@@ -22,10 +22,11 @@ if ! exists('g:bow_wob_spell_undercurl')
 endif
 
 " Colors
-let s:black = {'gui': '#080808', 'cterm': '0'}
+let s:black = {'gui': '#070707', 'cterm': '0'}
 let s:white = {'gui': '#F8F8F8', 'cterm': '15'}
 let s:light_grey = {'gui': '#cccccc', 'cterm': '7'}
 let s:dark_grey = {'gui': '#333333', 'cterm': '8'}
+let s:red = {'gui': '#cc0000', 'cterm': '12'}
 
 if &background == 'dark'
   let s:bg = s:black
@@ -106,7 +107,7 @@ hi! link Debug            Special
 
 call s:h('Underlined', {'fg': s:fg, 'gui': 'underline', 'cterm': 'underline'})
 call s:h('Ignore',     {'fg': s:bg})
-call s:h('Error',      {'fg': s:fg, 'bg': s:grey, 'gui': 'bold', 'cterm': 'bold'})
+call s:h('Error',      {'fg': s:red, 'bg': s:grey, 'gui': 'bold', 'cterm': 'bold'})
 call s:h('Todo',       {'fg': s:fg, 'bg': s:grey, 'gui': 'bold', 'cterm': 'bold'})
 
 " ui chrome ====================================================================
@@ -123,9 +124,9 @@ hi! link ModeMsg MoreMsg
 call s:h('LineNr',        {'fg': s:fg})
 call s:h('CursorLineNr',  {'fg': s:fg, 'bg': s:bg})
 call s:h('Question',      {'fg': s:fg})
-call s:h('StatusLine',    {'bg': s:bg, 'term': 'bold,reverse', 'cterm': 'bold,reverse'})
+call s:h('StatusLine',    {'bg': s:bg, 'term': 'bold,reverse', 'cterm': 'bold,reverse', 'gui': 'reverse'})
 call s:h('Conceal',       {'fg': s:grey})
-call s:h('StatusLineNC',  {'bg': s:bg, 'fg': s:fg, 'term': 'reverse', 'cterm': 'reverse'})
+call s:h('StatusLineNC',  {'bg': s:bg, 'fg': s:fg, 'term': 'reverse', 'cterm': 'reverse', 'gui': 'reverse'})
 call s:h('VertSplit',     {'bg': s:bg, 'fg': s:fg})
 call s:h('Title',         {'fg': s:fg})
 call s:h('Visual',        {'bg': s:fg, 'fg': s:bg})
